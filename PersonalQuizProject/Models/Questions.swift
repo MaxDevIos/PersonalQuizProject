@@ -31,7 +31,7 @@ extension Question {
                     Answer(text: "-12", typeAnswer: .wrong),
                     Answer(text: "-4", typeAnswer: .correct),
                     Answer(text: "16", typeAnswer: .wrong),
-                    Answer(text: "None of these", typeAnswer: .wrong)
+                    Answer(text: "None", typeAnswer: .wrong)
                 ]),
             Question(
                 text: "Calculate the result in your head and choose the correct answer below",
@@ -42,7 +42,7 @@ extension Question {
                     Answer(text: "12", typeAnswer: .wrong),
                     Answer(text: "-12", typeAnswer: .wrong),
                     Answer(text: "-2", typeAnswer: .wrong),
-                    Answer(text: "None of these", typeAnswer: .wrong)
+                    Answer(text: "None", typeAnswer: .wrong)
                 ]),
             Question(
                 text: "Jo bought a used car for $6000 and paid 15% deposit. How much did he still have to pay?",
@@ -53,7 +53,7 @@ extension Question {
                     Answer(text: "$5000", typeAnswer: .wrong),
                     Answer(text: "$4500", typeAnswer: .wrong),
                     Answer(text: "$5100", typeAnswer: .correct),
-                    Answer(text: "None of these", typeAnswer: .correct)
+                    Answer(text: "None", typeAnswer: .correct)
                 ]),
             Question(
                 text: "Calculate the result in your head and choose the correct answer below",
@@ -64,18 +64,18 @@ extension Question {
                     Answer(text: "-8", typeAnswer: .wrong),
                     Answer(text: "-16", typeAnswer: .wrong),
                     Answer(text: "-6", typeAnswer: .wrong),
-                    Answer(text: "None of these", typeAnswer: .correct)
+                    Answer(text: "None", typeAnswer: .correct)
                 ]),
             Question(
                 text: "What is 8% of $600?",
                 mathsAction: nil,
                 typeForm: .ranged,
                 answers: [
+                    Answer(text: "$48", typeAnswer: .correct),
                     Answer(text: "$580", typeAnswer: .wrong),
                     Answer(text: "$480", typeAnswer: .wrong),
-                    Answer(text: "$48", typeAnswer: .correct),
                     Answer(text: "$58", typeAnswer: .wrong),
-                    Answer(text: "None of these", typeAnswer: .wrong)
+                    Answer(text: "None", typeAnswer: .wrong)
                 ]),
             Question(
                 text: "Which is the longest distance?",
@@ -83,10 +83,10 @@ extension Question {
                 typeForm: .ranged,
                 answers: [
                     Answer(text: "3500cm", typeAnswer: .wrong),
-                    Answer(text: "65.5m", typeAnswer: .wrong),
                     Answer(text: "0.1km", typeAnswer: .correct),
+                    Answer(text: "65.5m", typeAnswer: .wrong),
                     Answer(text: "15.5m", typeAnswer: .wrong),
-                    Answer(text: "15.5m", typeAnswer: .wrong)
+                    Answer(text: "None", typeAnswer: .wrong)
                 ]),
             Question(
                 text: "What do smart people usually do?",

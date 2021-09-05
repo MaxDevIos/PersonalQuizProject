@@ -27,7 +27,6 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var rangedSlider: UISlider! {
         didSet {
             let answerCount = Float(currentAnswers.count - 1)
-            rangedSlider.value = Float(currentAnswers.count) / Float(2)
             rangedSlider.maximumValue = answerCount
         }
     }
@@ -51,7 +50,7 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                
         updateUI()
     }
     
@@ -77,6 +76,12 @@ class QuestionsViewController: UIViewController {
         let index = lrintf(rangedSlider.value)
         answersChoosen.append(currentAnswers[index])
         nextQuestion()
+    }
+    
+    @IBAction func rangedSliderActions() {
+        
+        rangedSlider.value = roundf(rangedSlider.value)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -131,6 +136,7 @@ extension QuestionsViewController {
     }
     
     private func showSingleStackView(with answers: [Answer]) {
+        rangedSlider.value = Float(currentAnswers.count) / Float(2)
         singleStackView.isHidden = false
         
         for (button, answer) in zip(singleButtons, answers) {
@@ -153,6 +159,5 @@ extension QuestionsViewController {
             label.text = answer.text
         }
     }
-    
 }
 
