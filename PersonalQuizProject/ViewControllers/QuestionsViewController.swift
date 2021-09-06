@@ -27,6 +27,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var rangedSlider: UISlider! {
         didSet {
             let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.value = Float(currentAnswers.count - 1) / Float(2)
             rangedSlider.maximumValue = answerCount
         }
     }
@@ -152,7 +153,6 @@ extension QuestionsViewController {
     }
     
     private func showRangeStackView(with answers: [Answer]) {
-        rangedSlider.value = Float(currentAnswers.count - 1) / Float(2)
         rangedStackView.isHidden = false
         
         for (label, answer) in zip(rangedLabels, answers) {
