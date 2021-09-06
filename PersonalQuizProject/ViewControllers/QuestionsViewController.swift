@@ -136,7 +136,6 @@ extension QuestionsViewController {
     }
     
     private func showSingleStackView(with answers: [Answer]) {
-        rangedSlider.value = Float(currentAnswers.count) / Float(2)
         singleStackView.isHidden = false
         
         for (button, answer) in zip(singleButtons, answers) {
@@ -153,6 +152,7 @@ extension QuestionsViewController {
     }
     
     private func showRangeStackView(with answers: [Answer]) {
+        rangedSlider.value = Float(currentAnswers.count - 1) / Float(2)
         rangedStackView.isHidden = false
         
         for (label, answer) in zip(rangedLabels, answers) {
